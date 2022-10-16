@@ -148,6 +148,38 @@ body.show-menu #navigation .container .menu li a:hover::before{
     transition: width .4s ease-in-out;
 }
 
+#navigation .container .menu li a::before{
+    content: ' ';
+    background-color: #cfb89e;
+    height: 2px;
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#navigation .container .menu li a::after{
+    content: ' ';
+    background-color: #cfb89e;
+    height: 2px;
+    width: 0%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#navigation .container .menu li a.active::after,
+#navigation .container .menu li a.active::before{
+    width: 100%;
+    transition: width .4s ease-in-out;
+}
+
+#navigation .container .menu li a:hover::after,
+#navigation .container .menu li a:hover::before{
+    width: 100%;
+    transition: width .4s ease-in-out;
+}
+
 body.show-menu #navigation .container .menu{
     opacity: 1;
     display: flex;

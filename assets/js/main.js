@@ -3,9 +3,11 @@ window.addEventListener('scroll', onScroll)
 onScroll()
 function onScroll(){
     activateMenuAtCurrentSection(home)
-    activateMenuAtCurrentSection(services)
-    activateMenuAtCurrentSection(about)
-    activateMenuAtCurrentSection(contact)
+    activateMenuAtCurrentSection(why_us)
+    activateMenuAtCurrentSection(about_us)
+    activateMenuAtCurrentSection(our_benefits)
+    activateMenuAtCurrentSection(products)
+    activateMenuAtCurrentSection(testimonials)
 }
 
 function activateMenuAtCurrentSection(section){
