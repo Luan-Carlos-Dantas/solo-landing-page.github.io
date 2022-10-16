@@ -45,7 +45,6 @@ img{
 h1{
     font-size: 3.6rem;
     font-family: 'Abyssinica',serif;
-    /* letter-spacing: -.40rem; */
     color: var(--title-color);
 }
 
@@ -354,4 +353,62 @@ a.btn:hover{
 
 .swiper-pagination-bullet-active{
     background-color: var(--home-color-bg);
+}
+
+#newsletter .col-a img{
+    padding: 0 20px 20px 0  ;
+    border-right: 10px double var(--details-color);
+    border-bottom: 10px double var(--details-color);;
+    box-shadow: -40px -40px 1px var(--home-color-bg);
+    margin-bottom: 4.8rem;
+}
+
+#newsletter .col-b{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3.2rem;
+}
+
+footer{
+    background-color: var(--title-color);
+    color: #fff;
+    padding-block: 2rem;
+}
+
+footer .col-a h2{
+    color: #fff;
+    font-size: 4.8rem;
+    font-family: 'Abyssinica',serif;
+    letter-spacing: -0.4rem;
+    margin-bottom: 2.4rem;
+}
+
+footer .col-b{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+footer .col-b .social{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 1.8rem;
+    font-size: 3rem;
+}
+
+footer .col-b .social a{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--home-color-bg);
+    transition: color .3s ease-in-out;
+    transition: transform .3s ease-in-out;
+}
+
+footer .col-b .social a:hover{
+    transform: translateY(-7px);
+    color: var(--bg-secondary-color);
 }
