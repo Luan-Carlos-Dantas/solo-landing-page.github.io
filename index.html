@@ -15,7 +15,29 @@
 
 <body>
     <header>
-        <nav></nav>
+        <nav id="navigation" class="scroll">
+            <div class="container">
+                <div class="brand">
+                    <h2><a onclick="closeMenu()" href="#"><i class="fa-solid fa-spa"></i><span>FB</span></a></h2>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a onclick="closeMenu()" href="#home">Home</a></li>
+                        <li><a onclick="closeMenu()" href="#why_us">Why Us</a></li>
+                        <li><a onclick="closeMenu()" href="#about_us">About Us</a></li>
+                        <li><a onclick="closeMenu()" href="#our_benefits">Our Benefits</a></li>
+                        <li><a onclick="closeMenu()" href="#products">Products</a></li>
+                        <li><a onclick="closeMenu()" href="#testimonials">Testimonials</a></li>
+                        <li><a onclick="closeMenu()" href="#newsletter">Newsletter</a></li>
+                    </ul>
+                </div>
+                <div class="hamburger hamburger--collapse-r">
+                    <div class="hamburger-box">
+                        <div class="hamburger-inner"></div>
+                    </div>
+                </div>     
+            </div>
+        </nav>
     </header>
     <main>
         <section id="home">
@@ -28,7 +50,8 @@
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel magni quisquam in quas
                             distinctio sunt, blanditiis tempora! In velit tempora iure, natus adipisci totam voluptatem
                             veritatis iste, nihil beatae excepturi?</p>
-                        <p><i class="fa-solid fa-sun"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
+                        <p><i class="fa-solid fa-sun"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Aliquam
                             ipsum quam cum animi totam. Quam aut vitae maiores aliquid obcaecati incidunt,
                             necessitatibus unde cumque atque itaque ipsum suscipit id. Dignissimos?</p>
                     </div>
@@ -236,4 +259,5 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 <script src="./assets/js/main.js"></script>
+
 </html>
