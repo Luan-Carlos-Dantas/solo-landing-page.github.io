@@ -72,6 +72,13 @@ a.btn{
     background-color: var(--title-color);
     color: #fff;
     box-shadow: 0 2px 10px 0 rgba(19, 19, 19, 0.37);
+    transition: color .3s ease-in-out;
+    transition: background .3s ease-in-out;
+}
+
+a.btn:hover{
+    background-color: var(--bg-secondary-color);
+    color: var(--title-color);
 }
 
 #home{
@@ -159,42 +166,87 @@ a.btn{
     right: -4px;
 }
 
+#our_benefits .col-a h2,
 #why_us .col-a h2{
     text-align: center;
     margin-bottom: 2.8rem;
 }
 
+#our_benefits .cards,
 #why_us .cards{
     display: flex;
     flex-direction: column;
     gap: 3.6rem;
 }
 
+#our_benefits .cards .card,
 #why_us .cards .card{
     padding: 4.8rem 2.4rem;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    border-bottom: 4px solid var(--home-color-bg);
     background-color: #fff;
 }
 
+#our_benefits .cards .card:hover{
+    background-color: var(--details-color);
+    transition: background .4s ease-in-out;
+}
+
+#why_us .cards .card:hover{
+    background-color: var(--home-color-bg);
+    transition: background .4s ease-in-out;
+}
+
+#our_benefits .cards .card{
+    border-bottom: 4px solid var(--details-color);
+}
+
+#why_us .cards .card{
+    border-bottom: 4px solid var(--home-color-bg);
+}
+
+#our_benefits .cards .card header,
 #why_us .cards .card header{
     text-align: center;
     margin-bottom: 2.4rem;
 }
 
+#our_benefits .cards .card h3,
 #why_us .cards .card h3{
     font-size: 4.8rem;
-    color: var(--home-color-bg);
 }
 
+#our_benefits .cards .card:hover h3,
+#our_benefits .cards .card:hover h4,
+#our_benefits .cards .card:hover p,
+#why_us .cards .card:hover h3,
+#why_us .cards .card:hover h4,
+#why_us .cards .card:hover p{
+    color: #f4f4f4;
+}
+
+
+#our_benefits .cards .card h3{
+    color: var(--details-color);
+    transition: color .4s ease-in-out;
+}
+
+#why_us .cards .card h3{
+    color: var(--home-color-bg);
+    transition: color .4s ease-in-out;
+}
+
+#our_benefits .cards .card h4,
 #why_us .cards .card h4{
     font-size: 2rem;
+    transition: color .4s ease-in-out;
 }
 
+#our_benefits .cards .card p,
 #why_us .cards .card p{
     font-size: 1.6rem;
     text-align: center;
     margin-bottom: 2.4rem;
+    transition: color .4s ease-in-out;
 }
 
 #about_us .col-a{
@@ -235,4 +287,71 @@ a.btn{
     justify-content: center;
     align-items: start;
     gap: 3.2rem;
+} 
+
+#products .col-a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 3.2rem;
+    margin-bottom: 4.8rem;
+}
+
+#products .col-b{
+    margin-bottom: 4.8rem;
+}
+
+#products .col-b .box{
+    background-color: var(--text-color);
+    color: var(--bg-primary-color);
+    padding: 2rem 2.8rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+#products .col-c img{
+    box-shadow: 20px 30px 1px var(--details-color);
+}
+
+#testimonials .col-a h2{
+    text-align: center;
+    margin-bottom: 4.8rem;
+}
+
+#testimonials .swiper{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+#testimonials .swiper .swiper-slide{
+    padding: 2.4rem 3.2rem;
+    background-color: var(--bg-secondary-color);
+}
+
+#testimonials .swiper .swiper-slide header div i{
+    margin-bottom: 2.4rem;
+    color: var(--home-color-bg);
+}
+
+#testimonials .swiper .swiper-slide article{
+    margin-bottom: 2.4rem;
+    font-size: 1.4rem;
+}
+
+#testimonials .swiper .swiper-slide p{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 1.8rem;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+#testimonials .swiper .swiper-slide p img{
+    width: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.swiper-pagination-bullet-active{
+    background-color: var(--home-color-bg);
 }
