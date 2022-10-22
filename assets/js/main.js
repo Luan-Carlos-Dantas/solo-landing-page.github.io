@@ -1,5 +1,12 @@
-
 window.addEventListener('scroll', onScroll)
+window.addEventListener('scroll', ()=>{
+    if(scrollY > 100){
+        document.querySelector('.arrow-up').classList.add('show')
+    }else{
+        document.querySelector('.arrow-up').classList.remove('show')
+    }
+})
+
 onScroll()
 function onScroll(){
     activateMenuAtCurrentSection(home)
@@ -8,6 +15,7 @@ function onScroll(){
     activateMenuAtCurrentSection(our_benefits)
     activateMenuAtCurrentSection(products)
     activateMenuAtCurrentSection(testimonials)
+    activateMenuAtCurrentSection(newsletter)
 }
 
 function activateMenuAtCurrentSection(section){
@@ -28,10 +36,10 @@ function activateMenuAtCurrentSection(section){
 
     const menuElement = document.querySelector(`.menu a[href*=${currentSection}]`)
 
-    menuElement.classList.remove('active')
+    menuElement.classList.remove('actived')
 
     if(sectionBoundaries){
-        menuElement.classList.add('active')
+        menuElement.classList.add('actived')
     }
 }
 
@@ -74,24 +82,23 @@ function closeMenu(){
 const swiper = new Swiper('.swiper',{
     loop: true,
     slidesPerView: 1,
-    autoplay:{
-        delay: 2500,
-        disableOnInteraction: false,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
     },
     pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-        dynamicBullets: true
+      el: ".swiper-pagination",
+      dynamicBullets: true,
     },
-    efect: 'coverflow',
     mousewheel: true,
     keyboard: true,
     breakpoints:{
-        992:{
-            slidesPerView:2,
-            setWrapperSize:true
-        }
+      992:{
+        slidesPerView:2,
+        setWrapperSize:true
+      }
     },
 });
 
 swiper.slideNext();
+AOS.init();

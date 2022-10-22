@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="shortcut icon" href="./assets/img/logo/spa-solid-logo.svg" type="image/x-icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Flower Beauty</title>
 </head>
 
@@ -42,7 +43,7 @@
     <main>
         <section id="home">
             <div class="container">
-                <article class="col-a">
+                <article data-aos="fade-right" class="col-a">
                     <h1><img src="./assets/img/logo/spa-solid-logo.svg" width="50px" height="50px"></h1>
                     <h1>NATURAL BEAUTY PRODUCTS</h1>
                     <div class="card-about">
@@ -57,7 +58,7 @@
                     </div>
                     <a href="#" class="btn">Entre em contato</a>
                 </article>
-                <article class="col-b">
+                <article data-aos="fade-left" class="col-b">
                     <img src="./assets/img/beautyfull-products-sample.jpg" alt="beautyfull-products">
                 </article>
             </div>
@@ -67,7 +68,7 @@
                 <article class="col-a">
                     <h2>Why Choose Us ?</h2>
                     <article class="cards">
-                        <div class="card">
+                        <div data-aos="fade-down" class="card">
                             <header>
                                 <h3><i class="fa-solid fa-leaf"></i></h3>
                                 <h4>Natural</h4>
@@ -75,7 +76,7 @@
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat asperiores ipsa
                                 laboriosam possimus sunt ullam.</p>
                         </div>
-                        <div class="card">
+                        <div data-aos="fade-up" class="card">
                             <header>
                                 <h3><i class="fa-solid fa-ban"></i></h3>
                                 <h4>No Side Effects</h4>
@@ -83,7 +84,7 @@
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat asperiores ipsa
                                 laboriosam possimus sunt ullam.</p>
                         </div>
-                        <div class="card">
+                        <div data-aos="fade-down" class="card">
                             <header>
                                 <h3><i class="fa-solid fa-medal"></i></h3>
                                 <h4>100% Organic</h4>
@@ -97,12 +98,12 @@
         </section>
         <section id="about_us">
             <div class="container">
-                <article class="col-a">
+                <article  data-aos="fade-up" class="col-a">
                     <div>
                         <img src="./assets/img/beautyfull-products-version.jpg" alt="beautyfull-products-version">
                     </div>
                 </article>
-                <article class="col-b">
+                <article data-aos="fade-down" class="col-b">
                     <h2>About Us</h2>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium illo nam dolor minus
@@ -118,7 +119,7 @@
                 <article class="col-a">
                     <h2>Our Benefits</h2>
                     <article class="cards">
-                        <div class="card">
+                        <div data-aos="fade-up" class="card">
                             <header>
                                 <h3><i class="fa-solid fa-recycle"></i></i></h3>
                                 <h4>100% Return</h4>
@@ -126,7 +127,7 @@
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat asperiores ipsa
                                 laboriosam possimus sunt ullam.</p>
                         </div>
-                        <div class="card">
+                        <div data-aos="fade-down" class="card">
                             <header>
                                 <h3><i class="fa-solid fa-truck"></i></i></h3>
                                 <h4>On time Delivery</h4>
@@ -134,7 +135,7 @@
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat asperiores ipsa
                                 laboriosam possimus sunt ullam.</p>
                         </div>
-                        <div class="card">
+                        <div data-aos="fade-up" class="card">
                             <header>
                                 <h3><i class="fa-solid fa-calendar-days"></i></h3>
                                 <h4>24x7 Support</h4>
@@ -148,17 +149,18 @@
         </section>
         <section id="products">
             <div class="container">
-                <article class="col-a">
+                <article data-aos="fade-up" class="col-a">
                     <h2>Whats does seruns do for your skin ?</h2>
 
                     <a href="#" class="btn">Explore mais</a>
                 </article>
-                <article class="col-b">
+                <article data-aos="fade-down" class="col-b">
                     <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima reiciendis ullam
                         laboriosam nesciunt omnis quae explicabo sequi culpa quos, magni, dignissimos exercitationem
-                        voluptate quis facere quod eos dicta? Corporis, eos!</div>
+                        voluptate quis facere quod eos dicta? Corporis, eos!
+                    </div>
                 </article>
-                <article class="col-c">
+                <article data-aos="fade-up" class="col-c">
                     <div>
                         <img src="./assets/img/beautyfull-products-version-two.jpg"
                             alt="beautyfull-products-version-two">
@@ -168,7 +170,7 @@
         </section>
         <section id="testimonials">
             <div class="container">
-                <article class="col-a">
+                <article data-aos="fade-down" class="col-a">
                     <h2>Testimonials</h2>
                     <!-- Slider main container -->
                     <div class="swiper">
@@ -176,46 +178,52 @@
                         <div class="swiper-wrapper">
                             <!-- Slides -->
                             <div class="swiper-slide">
-                                <header>
-                                    <div><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                            class="fa-solid fa-star"></i></div>
-                                </header>
-                                <article>
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id soluta praesentium
-                                    amet, beatae ad numquam doloribus dolor, asperiores obcaecati fugit quo doloremque
-                                    adipisci molestiae rem accusantium autem earum corporis ea.
-                                </article>
-                                <p class="user-box"><img src="https://randomuser.me/api/portraits/women/56.jpg"
-                                        alt="profile-pic"> Sarah Rodrigues</p>
+                                <blockquote>
+                                    <header>
+                                        <div><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                class="fa-solid fa-star"></i></div>
+                                    </header>
+                                    <article>
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id soluta praesentium
+                                        amet, beatae ad numquam doloribus dolor, asperiores obcaecati fugit quo doloremque
+                                        adipisci molestiae rem accusantium autem earum corporis ea.
+                                    </article>
+                                    <p class="user-box"><img src="https://randomuser.me/api/portraits/women/56.jpg"
+                                            alt="profile-pic"> Sarah Rodrigues</p>
+                                </blockquote>
                             </div>
                             <div class="swiper-slide">
-                                <header>
-                                    <div><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                            class="fa-solid fa-star"></i></div>
-                                </header>
-                                <article>
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id soluta praesentium
-                                    amet, beatae ad numquam doloribus dolor, asperiores obcaecati fugit quo doloremque
-                                    adipisci molestiae rem accusantium autem earum corporis ea.
-                                </article>
-                                <p class="user-box"><img src="https://randomuser.me/api/portraits/women/46.jpg"
-                                        alt="profile-pic"> Sheila Amaral</p>
+                                <blockquote>
+                                    <header>
+                                        <div><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                class="fa-solid fa-star"></i></div>
+                                    </header>
+                                    <article>
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id soluta praesentium
+                                        amet, beatae ad numquam doloribus dolor, asperiores obcaecati fugit quo doloremque
+                                        adipisci molestiae rem accusantium autem earum corporis ea.
+                                    </article>
+                                    <p class="user-box"><img src="https://randomuser.me/api/portraits/women/46.jpg"
+                                            alt="profile-pic"> Sheila Amaral</p>
+                                </blockquote>
                             </div>
                             <div class="swiper-slide">
-                                <header>
-                                    <div><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                            class="fa-solid fa-star"></i></div>
-                                </header>
-                                <article>
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id soluta praesentium
-                                    amet, beatae ad numquam doloribus dolor, asperiores obcaecati fugit quo doloremque
-                                    adipisci molestiae rem accusantium autem earum corporis ea.
-                                </article>
-                                <p class="user-box"><img src="https://randomuser.me/api/portraits/women/36.jpg"
-                                        alt="profile-pic"> Leticia Lenci</p>
+                                <blockquote>
+                                    <header>
+                                        <div><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                class="fa-solid fa-star"></i></div>
+                                    </header>
+                                    <article>
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id soluta praesentium
+                                        amet, beatae ad numquam doloribus dolor, asperiores obcaecati fugit quo doloremque
+                                        adipisci molestiae rem accusantium autem earum corporis ea.
+                                    </article>
+                                    <p class="user-box"><img src="https://randomuser.me/api/portraits/women/36.jpg"
+                                            alt="profile-pic"> Leticia Lenci</p>
+                                </blockquote>
                             </div>
                         </div>
                         <!-- If we need pagination -->
@@ -226,10 +234,10 @@
         </section>
         <section id="newsletter">
             <div class="container">
-                <article class="col-a">
+                <article data-aos="fade-up"  class="col-a">
                     <img src="./assets/img/beautyfull-products-version-tree.jpg" alt="beautyfull-products-version-two">
                 </article>
-                <article class="col-b">
+                <article data-aos="fade-down" class="col-b">
                     <h2>Our Newsletter</h2>
                     <a href="#" class="btn">Contact Us</a>
                 </article>
@@ -240,11 +248,11 @@
         <div class="container">
             <article class="col-a">
                 <h2><i class="fa-solid fa-spa"></i> Flower Beauty</h2>
-            </article>
-            <article class="col-b">
                 <h4>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum id laboriosam qui aliquam
                     voluptatem adipisci repellendus! Commodi sunt ullam facilis maxime, laboriosam ea. Non optio vitae
                     voluptate nulla veritatis voluptates.</h4>
+            </article>
+            <article class="col-b">
                 <div class="social">
                     <p><a href="#"><i class="fa-brands fa-square-whatsapp"></i></a></p>
                     <p><a href="#"><i class="fa-brands fa-square-facebook"></i></a></p>
@@ -252,12 +260,15 @@
                     <p><a href="#"><i class="fa-brands fa-square-twitter"></i></a></p>
                 </div>
             </article>
-            <hr>
-            <p>&copy; Todos direitos reservados</p>
+            <article class="col-c">
+                <hr>
+                <p>&copy; Todos direitos reservados</p>
+            </article>
         </div>
     </footer>
+    <a class="arrow-up" href="#"><i class="fa-solid fa-angles-up"></i></a>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="./assets/js/main.js"></script>
-
 </html>

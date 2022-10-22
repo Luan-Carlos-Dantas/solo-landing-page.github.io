@@ -9,6 +9,19 @@
   --details-color: #b3637e;
 }
 
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--title-color);
+  height: 7.4rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -61,6 +74,36 @@ section {
   padding-block: 10rem;
 }
 
+a.arrow-up {
+  font-size: 2.5rem;
+  color: var(--bg-secondary-color);
+  background-color: var(--title-color);
+  display: inline-block;
+  padding: 1rem 2rem;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: 300;
+  transform: translate(100%, 100%);
+  transition: 0.3s ease-in-out;
+}
+
+a.arrow-up.show {
+  font-size: 2.5rem;
+  color: var(--bg-secondary-color);
+  background-color: var(--title-color);
+  display: inline-block;
+  padding: 1rem 2rem;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+  z-index: 300;
+  transform: translate(0, 0);
+  transition: 0.3s ease-in-out;
+}
+
 a.btn {
   display: inline-block;
   font-size: 1.6rem;
@@ -78,145 +121,148 @@ a.btn:hover {
   color: var(--title-color);
 }
 
-#navigation{
-    background-color: var(--title-color);
-    padding-block: 1rem;
+#navigation {
+  background-color: var(--title-color);
+  padding-block: 1rem;
 }
 
-#navigation.scroll{
-    position: fixed;
-    width: 100vw;
-    z-index: 200;
+#navigation.scroll {
+  position: fixed;
+  width: 100vw;
+  z-index: 200;
+  top:0;
+  left: 0;
 }
 
-#navigation .container .menu{
-    display: none;
-    visibility: hidden;
-}
-
-.menu {
-    transform: translateY(100%);
+#navigation .container .menu {
+  display: none;
+  visibility: hidden;
 }
 
 body.show-menu {
-    overflow: hidden;
+  overflow: hidden;
 }
 
-body.show-menu #navigation .container .menu ul{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 2.4rem;
+body.show-menu #navigation .container .menu ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2.4rem;
 }
 
-body.show-menu #navigation .container .menu ul li{
-    list-style: none;
+body.show-menu #navigation .container .menu ul li {
+  list-style: none;
 }
 
-body.show-menu #navigation .container .menu li a{
-    text-decoration: none;
-    color: var(--home-color-bg);
-    font-size: 3.6rem;
-    position: relative;
-    padding-block: 0.4rem;
+body.show-menu #navigation .container .menu li a {
+  text-decoration: none;
+  color: var(--home-color-bg);
+  font-size: 3.6rem;
+  position: relative;
+  padding-block: 0.4rem;
 }
 
-body.show-menu #navigation .container .menu li a::before{
-    content: ' ';
-    background-color: #cfb89e;
-    height: 2px;
-    width: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
+body.show-menu #navigation .container .menu li a::before {
+  content: " ";
+  background-color: #cfb89e;
+  height: 2px;
+  width: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-body.show-menu #navigation .container .menu li a::after{
-    content: ' ';
-    background-color: #cfb89e;
-    height: 2px;
-    width: 0%;
-    position: absolute;
-    bottom: 0;
-    right: 0;
+body.show-menu #navigation .container .menu li a::after {
+  content: " ";
+  background-color: #cfb89e;
+  height: 2px;
+  width: 0%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 body.show-menu #navigation .container .menu li a:hover::after,
-body.show-menu #navigation .container .menu li a:hover::before{
-    width: 100%;
-    transition: width .4s ease-in-out;
+body.show-menu #navigation .container .menu li a:hover::before {
+  width: 100%;
+  transition: width 0.4s ease-in-out;
 }
 
-#navigation .container .menu li a::before{
-    content: ' ';
-    background-color: #cfb89e;
-    height: 2px;
-    width: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
+body.show-menu #navigation .container .menu li a.actived::after,
+body.show-menu #navigation .container .menu li a.actived::before {
+  width: 100%;
+  transition: width 0.4s ease-in-out;
 }
 
-#navigation .container .menu li a::after{
-    content: ' ';
-    background-color: #cfb89e;
-    height: 2px;
-    width: 0%;
-    position: absolute;
-    bottom: 0;
-    right: 0;
+#navigation .container .menu li a::before {
+  content: " ";
+  background-color: #cfb89e;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-#navigation .container .menu li a.active::after,
-#navigation .container .menu li a.active::before{
-    width: 100%;
-    transition: width .4s ease-in-out;
+#navigation .container .menu li a::after {
+  content: " ";
+  background-color: #cfb89e;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 #navigation .container .menu li a:hover::after,
-#navigation .container .menu li a:hover::before{
-    width: 100%;
-    transition: width .4s ease-in-out;
+#navigation .container .menu li a:hover::before {
+  width: 100%;
+  transition: width 0.4s ease-in-out;
 }
 
-body.show-menu #navigation .container .menu{
-    opacity: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    visibility: visible;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: var(--title-color);
-    margin-top: 1rem;
-    width: 100%;
-    height: 100vh;
-    transform: translateY(0);
-    transition: transform .4s ease-in-out;
+#navigation .container .menu li a.actived::after,
+#navigation .container .menu li a.actived::before {
+  width: 100%;
+  transition: width 0.4s ease-in-out;
 }
 
-#navigation .container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+body.show-menu #navigation .container .menu {
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--title-color);
+  margin-top: 1rem;
+  width: 100%;
+  height: 100vh;
+  transform: translateY(0);
+  transition: transform 0.4s ease-in-out;
 }
 
-body.show-menu #navigation .container .brand h2{
-    position: relative;
-    z-index: 201;
+#navigation .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-#navigation .brand h2{
-    font-size:3rem;
-    font-family: "Abyssinica", serif;
+body.show-menu #navigation .container .brand h2 {
+  position: relative;
+  z-index: 201;
 }
 
+#navigation .brand h2 {
+  font-size: 3rem;
+  font-family: "Abyssinica", serif;
+}
 
-#navigation .brand h2 a{
-    text-decoration: none;
-    color: var(--bg-secondary-color);
+#navigation .brand h2 a {
+  text-decoration: none;
+  color: var(--bg-secondary-color);
 }
 
 /* Menu Hamburguer */
@@ -264,7 +310,7 @@ body.show-menu #navigation .container .brand h2{
 .hamburger-inner::after {
   width: 30px;
   height: 3px;
-  background-color: var(--bg-secondary-color);;
+  background-color: var(--bg-secondary-color);
   border-radius: 4px;
   position: absolute;
   transition-property: transform;
@@ -556,26 +602,25 @@ body.show-menu #navigation .container .brand h2{
   margin-bottom: 4.8rem;
 }
 
-#testimonials .swiper {
+
+#testimonials .swiper .swiper-slide blockquote{
+  height: auto;
+  padding: 4rem 1.6rem;
+  background-color: var(--bg-secondary-color);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
-#testimonials .swiper .swiper-slide {
-  padding: 2.4rem 3.2rem;
-  background-color: var(--bg-secondary-color);
-}
-
-#testimonials .swiper .swiper-slide header div i {
+#testimonials .swiper .swiper-slide blockquote header div i {
   margin-bottom: 2.4rem;
   color: var(--home-color-bg);
 }
 
-#testimonials .swiper .swiper-slide article {
+#testimonials .swiper .swiper-slide blockquote article {
   margin-bottom: 2.4rem;
   font-size: 1.4rem;
 }
 
-#testimonials .swiper .swiper-slide p {
+#testimonials .swiper .swiper-slide blockquote p {
   display: flex;
   align-items: center;
   justify-items: center;
@@ -584,7 +629,7 @@ body.show-menu #navigation .container .brand h2{
   margin-bottom: 2rem;
 }
 
-#testimonials .swiper .swiper-slide p img {
+#testimonials .swiper .swiper-slide blockquote p img {
   width: 50px;
   width: 50px;
   border-radius: 50%;
@@ -592,6 +637,11 @@ body.show-menu #navigation .container .brand h2{
 
 .swiper-pagination-bullet-active {
   background-color: var(--home-color-bg);
+}
+
+.swiper-slide {
+  height: auto;
+  padding: 6.4rem 1.6rem;
 }
 
 #newsletter .col-a img {
@@ -650,4 +700,226 @@ footer .col-b .social a {
 footer .col-b .social a:hover {
   transform: translateY(-7px);
   color: var(--bg-secondary-color);
+}
+
+/* Medias Queries */
+@media (min-width: 1024px) {
+  /* Geral */
+  .container {
+    width: min(112rem, 100%);
+  }
+  .col-a {
+    grid-area: A;
+  }
+  .col-b {
+    grid-area: B;
+  }
+  .col-c {
+    grid-area: C;
+  }
+  body {
+    overflow: auto;
+  }
+  section {
+    padding-block: 16rem;
+  }
+  section header h2{
+    font-size: 4rem;
+    line-height: 5.2rem;
+  }
+
+
+  h2 {
+    font-size: 3.6rem;
+  }
+
+  #navigation .container{
+    padding-block: 1rem;
+    color: var(--bg-secondary-color);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #navigation .container .hamburger.hamburger--collapse-r{
+    display: none;
+    visibility: hidden;
+  }
+
+  #navigation .container .brand h2 {
+    font-size: 2rem;
+    font-family: "Abyssinica", serif;
+  }
+
+  #navigation .container .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    visibility: visible;
+  }
+
+  #navigation .container .menu ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:3.2rem; 
+  }
+
+  #navigation .container .menu ul li{
+    font-size: 1.8rem;
+    list-style: none;
+  }
+
+  #navigation .container .menu li a{
+    color: var(--home-color-bg);
+    text-decoration: none;
+    font-weight: 900;
+    position: relative;
+  }
+
+  #navigation .container .menu li a::before {
+    height: 0px;
+  }
+
+  #navigation .container .menu li a::after {
+    content: " ";
+    background-color: #cfb89e;
+    height: 2px;
+    width: 0%;
+    position: absolute;
+    bottom: -24px;
+    right: 0;
+  }
+
+  #navigation .container .menu li a:hover::after,
+  #navigation .container .menu li a:hover::before {
+    width: 100%;
+    transition: width 0.4s ease-in-out;
+  }
+
+  #navigation .container .menu li a.actived::after,
+  #navigation .container .menu li a.actived::before {
+    width: 100%;
+    transition: width 0.4s ease-in-out;
+  }
+
+  #navigation .container .brand h2{
+    font-size: 3rem;
+    font-weight: 900;
+  }
+
+ /* Home */
+  #home .container {
+    display: grid;
+    grid-template-columns: 60rem 1fr;
+    grid-template-areas: "A B";
+  }
+
+  #home h1 {
+    font-size: 5.2rem;
+  }
+
+  #home img {
+    width: 42rem;
+  }
+
+  #home .col-a {
+    margin-right: 2rem;
+    gap: 4.8rem;
+    justify-content: start;
+  }
+  #home .col-a .card-about p {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+  }
+
+  #home .col-a .card-about::before {
+    background-color: #e99331;
+    top: 20px;
+    left: 400px;
+  }
+
+  #home .col-b::before {
+    top: 200px;
+    left: 3px;
+  }
+
+  #home .col-b::after {
+    bottom: 200px;
+    right: 3px;
+  }
+
+  /* Why Us */
+
+  #why_us .container,
+  #our_benefits .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "A A";
+  }
+
+  #why_us .container h2,
+  #our_benefits .container h2 {
+    margin-bottom: 4.8rem;
+  }
+
+  #why_us .container .cards,
+  #our_benefits .container .cards{
+    flex-direction: row;
+  }
+
+  #why_us .container .cards .card,
+  #our_benefits .container .cards .card{
+    cursor:default;
+  }
+
+  #about_us .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "A B";
+  }
+
+  #products .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "A B C";
+  }
+
+  #products .container .col-b{
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+  }
+
+  #products .container .col-b .box{
+    margin: 10px;
+  }
+
+  #testimonials .container .swiper .swiper-slide blockquote{
+      height: auto;
+      padding: 6.4rem 1.6rem;
+      margin: 1rem;
+  }
+
+  #newsletter .container{
+    display: grid;
+    grid-template-columns: 1fr 50rem;
+    grid-template-areas: 'A B';
+  }
+
+  footer .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:'A B' 'C C';
+  }
+
+  footer .container .col-a{
+    margin-bottom: 4.8rem;
+  }
+
+  footer .container .col-b{
+    display: grid;
+    align-self: flex-end;
+    justify-self: end;
+  }
+
 }
